@@ -17,26 +17,26 @@ def input_validator(max_num):
             print(f"value typed is outside the range number, the range number is between 1 and {max_num}")
 
 def difficulty_selector():
-    print("WELCOME TO THE NUMBER GUESSING GAME")
-    print("select a level")
-    print("1. Easy")
-    print("2. Medium")
-    print("3. Hard")  
-    level = (input("select your level: "))  
-    if level == '1':
-        print("I'm thinking of a number between 1 and 50") 
-        print("You have 10 attempts")
-        return easy
-    elif level == '2':
-        print("I'm thinking of a number between 1 and 100") 
-        print("You have 7 attempts")
-        return medium
-    elif level == '3':
-        print("I'm thinking of a number between 1 and 200") 
-        print("You have 5 attempts")
-        return hard
-    else:
-        print("invalid level, the level is between 1, 2 and 3")           
+    while True:
+        print("\nselect a level")
+        print("1. Easy")
+        print("2. Medium")
+        print("3. Hard")  
+        level = (input("select your level: "))  
+        if level == '1':
+            print("I'm thinking of a number between 1 and 50") 
+            print("You have 10 attempts")
+            return easy
+        elif level == '2':
+            print("I'm thinking of a number between 1 and 100") 
+            print("You have 7 attempts")
+            return medium
+        elif level == '3':
+            print("I'm thinking of a number between 1 and 200") 
+            print("You have 5 attempts")
+            return hard
+        else:
+            print("invalid level, the level is between 1, 2 and 3")           
           
 def guess_num(max_num, attempt, multiplier):
     secret_num = random.randint(1, max_num)
